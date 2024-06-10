@@ -4,4 +4,92 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="29dp" />
+
+    <EditText
+        android:id="@+id/edtDay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="26dp" />
+
+    <EditText
+        android:id="@+id/edtMinTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="35dp" />
+
+    <EditText
+        android:id="@+id/edtMaxTemp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="36dp" />
+
+    <EditText
+        android:id="@+id/edtWeatherCondition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:ems="10"
+        android:inputType="text"
+        android:text="Name" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="27dp" />
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Add" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="27dp" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="Clear" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="27dp" />
+
+    <Button
+        android:id="@+id/btnDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="View Details" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="27dp" />
 </LinearLayout>
