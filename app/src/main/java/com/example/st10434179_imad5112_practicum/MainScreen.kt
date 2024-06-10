@@ -40,6 +40,7 @@ class MainScreen : AppCompatActivity() {
         val btnAdd = findViewById<Button>(R.id.btnAdd)
         val btnClear = findViewById<Button>(R.id.btnClear)
         val btnViewDetails = findViewById<Button>(R.id.btnDetails)
+        val btnExit = findViewById<Button>(R.id.btnExit2ndScreen)
 
 
         //button that clears user inputs and arrays
@@ -50,6 +51,11 @@ class MainScreen : AppCompatActivity() {
         //button that adds user inputs to arrays
         btnAdd.setOnClickListener {
             addData()
+        }
+
+        //button that exits the application
+        btnExit.setOnClickListener {
+            finish()
         }
 
         //parsing values so we are able to use them on DetailScreen, this also swaps screens to DetailScreen
