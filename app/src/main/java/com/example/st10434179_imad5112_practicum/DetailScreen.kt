@@ -31,20 +31,19 @@ class DetailScreen : AppCompatActivity() {
         //using stringbuilder to easily manipulate the output
         val displayOutput = StringBuilder()
         //only use is for calculating the average temperature
-        var totalTempForCalc = 0
+        var totalTemperature = 0
 
         //for each loop looping for as many entries there are in the array of days, and adding each array entry into the displayOutput string
         for (i in days.indices) {
             displayOutput.append("Day: ${days[i]}\n Min Temperature: ${minTemps[i]} degrees \n Max Temperature: ${maxTemps[i]} degrees \n Weather Condition: ${allWeatherConditions[i]}\n\n")
-            totalTempForCalc += minTemps[i] + maxTemps[i]
+            totalTemperature += minTemps[i] + maxTemps[i]
 
         }
 
-        //calculation of average temperature (average not accurate)
-        val averageTempValue = if (days.isEmpty() || days.size == 1)
-            0
-        else
-            totalTempForCalc / days.size
+        val totalEntries = days.size * 2
+
+        val averageTempValue = if (totalEntries == 0) 0 else totalTemperature / totalEntries
+
 
         //output of the string we just built (results)
         txtOutput.text = displayOutput.toString()
