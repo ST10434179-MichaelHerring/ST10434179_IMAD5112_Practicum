@@ -45,7 +45,6 @@ if btnAdd is clicked:
 	Retrieve maxTemp from edtMaxTemp
 	Retrieve weatherConditions from edtWeatherConditions
 	Initialize txtErrorM
-	
 	If all inputs are valid:
 		If minTemp is smaller than maxTemp:
 			Add day to days
@@ -65,12 +64,10 @@ if btnClear is clicked:
 	Clear minTemps
 	Clear maxTemps
 	Clear allWeatherConditions
-	
 	Clear edtDay
 	Clear edtMinTemp
 	Clear edtMaxTemp
 	Clear edtWeatherConditions
-	
 	Show message data has been cleared
 	
 	
@@ -97,7 +94,6 @@ Initialize totalTempForCalc as 0
 For each day in days
 	Append day, minTemps, maxTemps and allWeatherConditions to displayOutput
 	Add minTemps and maxTemps to totalTempForCalc
-	
 	If days is empty or number of days is 1:
 		Set averageTempValue to 0
 	Else:
