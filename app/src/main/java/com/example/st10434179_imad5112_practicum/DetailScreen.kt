@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 class DetailScreen : AppCompatActivity() {
 
     private lateinit var txtOutput: TextView
+    private lateinit var AverageTemp: TextView
     private lateinit var btnBack: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,6 +18,7 @@ class DetailScreen : AppCompatActivity() {
         setContentView(R.layout.detail_screen)
 
         txtOutput = findViewById<TextView>(R.id.txtOutput)
+        AverageTemp = findViewById<TextView>(R.id.txtAverageTemp)
 
         btnBack = findViewById<Button>(R.id.btnBack)
 
@@ -35,6 +37,7 @@ class DetailScreen : AppCompatActivity() {
         }
 
         txtOutput.text = displayOutput.toString()
+        AverageTemp.text = "Average Temperature: $AverageTemp degrees"
 
         btnBack.setOnClickListener {
             finish()

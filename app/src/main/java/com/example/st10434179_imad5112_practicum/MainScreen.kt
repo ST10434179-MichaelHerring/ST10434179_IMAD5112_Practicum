@@ -96,7 +96,7 @@ class MainScreen : AppCompatActivity() {
                 Toast.makeText(this, "Please enter all fields correctly", Toast.LENGTH_SHORT).show()
             }
         }
-    }
+
 
     private fun clear() {
         //clears all fields and arrays
