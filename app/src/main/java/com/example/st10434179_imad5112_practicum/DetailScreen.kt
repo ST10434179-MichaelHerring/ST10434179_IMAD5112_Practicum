@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 class DetailScreen : AppCompatActivity() {
 
     private lateinit var txtOutput: TextView
-    private lateinit var AverageTemp: TextView
+    private lateinit var averageTemp: TextView
     private lateinit var btnBack: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -17,10 +17,10 @@ class DetailScreen : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.detail_screen)
 
-        txtOutput = findViewById<TextView>(R.id.txtOutput)
-        AverageTemp = findViewById<TextView>(R.id.txtAverageTemp)
+        txtOutput = findViewById(R.id.txtOutput)
+        averageTemp = findViewById(R.id.txtAverageTemp)
 
-        btnBack = findViewById<Button>(R.id.btnBack)
+        btnBack = findViewById(R.id.btnBack)
 
         val days = intent.getStringArrayListExtra("days") ?: arrayListOf()
         val minTemps = intent.getIntegerArrayListExtra("minTemps") ?: arrayListOf()
@@ -28,16 +28,17 @@ class DetailScreen : AppCompatActivity() {
         val allWeatherConditions = intent.getStringArrayListExtra("allWeatherConditions") ?: arrayListOf()
 
         val displayOutput = StringBuilder()
-
-
+        var totalTempForCalc = 0
 
         for (i in days.indices) {
-            displayOutput.append("Day: ${days[i]}, Minimum Temperature: ${minTemps[i]}, Maximum Temperature: ${maxTemps[i]}, Weather Condition: ${allWeatherConditions[i]}\n")
-            val averageTemperature = (minTemps[i] + maxTemps[i]) / days.size
+            displayOutput.append("Day: ${days[i]}\n Min Temperature: ${minTemps[i]}\n Max Temperature: ${maxTemps[i]}\n Weather Condition: ${allWeatherConditions[i]}\n\n")
+            totalTempForCalc += minTemps[i] + maxTemps[i]
         }
 
+        val averageTempValue = totalTempForCalc / days.size
+
         txtOutput.text = displayOutput.toString()
-        AverageTemp.text = "Average Temperature: $AverageTemp degrees"
+        averageTemp.text = "Average Temperature: $averageTempValue degrees"
 
         btnBack.setOnClickListener {
             finish()

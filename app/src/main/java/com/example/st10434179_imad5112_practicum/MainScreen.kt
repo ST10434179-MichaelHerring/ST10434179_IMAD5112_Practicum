@@ -16,7 +16,7 @@ class MainScreen : AppCompatActivity() {
     private val days = ArrayList<String>()
     private val minTemps = ArrayList<Int>()
     private val maxTemps = ArrayList<Int>()
-    private val allweatherConditions = ArrayList<String>()
+    private val allWeatherConditions = ArrayList<String>()
 
     //userinputted values declared above OnCreate to be able to use in functions as well
     private lateinit var edtDay: EditText
@@ -58,7 +58,7 @@ class MainScreen : AppCompatActivity() {
             intent.putStringArrayListExtra("days", days)
             intent.putIntegerArrayListExtra("minTemps", minTemps)
             intent.putIntegerArrayListExtra("maxTemps", maxTemps)
-            intent.putStringArrayListExtra("allweatherConditions", allweatherConditions)
+            intent.putStringArrayListExtra("allWeatherConditions", allWeatherConditions)
             startActivity(intent)
         }
     }
@@ -78,7 +78,7 @@ class MainScreen : AppCompatActivity() {
                 days.add(day)
                 minTemps.add(minTemp)
                 maxTemps.add(maxTemp)
-                allweatherConditions.add(weatherConditions)
+                allWeatherConditions.add(weatherConditions)
 
                 //clears the fields once values are added to the parallel arrays
                 edtDay.text.clear()
@@ -103,7 +103,7 @@ class MainScreen : AppCompatActivity() {
         days.clear()
         minTemps.clear()
         maxTemps.clear()
-        allweatherConditions.clear()
+        allWeatherConditions.clear()
 
         edtDay.text.clear()
         edtMinTemp.text.clear()
