@@ -14,6 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="Monday - Sunday"
         android:inputType="text" />
 
@@ -27,6 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="Min Temperature"
         android:inputType="text" />
 
@@ -40,6 +42,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="Max Temperature"
         android:inputType="text" />
 
@@ -53,8 +56,21 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:ems="10"
+        android:gravity="center_horizontal"
         android:hint="Weather Condition (Sunny, Rainy, etc.)"
         android:inputType="text" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+
+    <TextView
+        android:id="@+id/txtErrorM"
+        android:layout_width="352dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:textColor="#DF0A0A" />
 
     <Space
         android:layout_width="match_parent"

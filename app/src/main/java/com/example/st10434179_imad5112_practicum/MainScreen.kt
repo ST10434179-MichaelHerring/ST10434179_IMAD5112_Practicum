@@ -70,27 +70,31 @@ class MainScreen : AppCompatActivity() {
         val minTemp = edtMinTemp.text.toString().toIntOrNull()
         val maxTemp = edtMaxTemp.text.toString().toIntOrNull()
         val weatherConditions = edtWeatherConditions.text.toString()
+        var txtErrorM = findViewById<TextView>(R.id.txtErrorM)
 
         //only adds values if all values are present/entered in
         if (day.isNotEmpty() && minTemp != null && maxTemp != null && weatherConditions.isNotEmpty()) {
-            days.add(day)
-            minTemps.add(minTemp)
-            maxTemps.add(maxTemp)
-            allweatherConditions.add(weatherConditions)
+            if (minTemp < maxTemp) {
+                days.add(day)
+                minTemps.add(minTemp)
+                maxTemps.add(maxTemp)
+                allweatherConditions.add(weatherConditions)
 
-            //clears the fields once values are added to the parallel arrays
-            edtDay.text.clear()
-            edtMinTemp.text.clear()
-            edtMaxTemp.text.clear()
-            edtWeatherConditions.text.clear()
+                //clears the fields once values are added to the parallel arrays
+                edtDay.text.clear()
+                edtMinTemp.text.clear()
+                edtMaxTemp.text.clear()
+                edtWeatherConditions.text.clear()
 
-            //toast to show values have been added to arrays
-            Toast.makeText(this, "User inputs added", Toast.LENGTH_SHORT).show()
-        }
-        else
-        {
-            //toast to show values have not been added to arrays
-            Toast.makeText(this, "Please enter all fields correctly", Toast.LENGTH_SHORT).show()
+                //toast to show values have been added to arrays
+                Toast.makeText(this, "User inputs added", Toast.LENGTH_SHORT).show()
+            } else {
+                txtErrorM.text = "Minimum temperature must be lower than maximum temperature"
+            }
+        } else {
+                //toast to show values have not been added to arrays
+                Toast.makeText(this, "Please enter all fields correctly", Toast.LENGTH_SHORT).show()
+            }
         }
     }
 
