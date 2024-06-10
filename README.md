@@ -106,4 +106,23 @@ Display averageTempValue in averageTemp
 If btnBack is clicked:
 Finish current activity and navigate back to MainScreen
 
-	
+
+
+Splash Screen
+![Splash_Screen](https://github.com/ST10434179-MichaelHerring/ST10434179_IMAD5112_Practicum/assets/164514448/62486c82-a5b9-4518-a2e9-1676bf070953)
+
+Main Screen
+![Main_Screen](https://github.com/ST10434179-MichaelHerring/ST10434179_IMAD5112_Practicum/assets/164514448/092d7ad4-040a-4cee-9bd7-0e5730f1b4c4)
+
+Main Screen with Temperature error, trying to screenshot toasts are extremely challenging
+![Main_Screen_withTempError](https://github.com/ST10434179-MichaelHerring/ST10434179_IMAD5112_Practicum/assets/164514448/bbcccc25-623f-4b56-b2bb-a5e78805728c)
+
+Details Screen
+![Details_Screen](https://github.com/ST10434179-MichaelHerring/ST10434179_IMAD5112_Practicum/assets/164514448/8820618c-e244-4938-917b-dae754c01b86)
+
+
+
+
+
+
+ 
