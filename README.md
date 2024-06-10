@@ -19,9 +19,9 @@ Pseudocode (unfortunately formatted very strangely, attempted to fix):
 Splash Screen:
 Display splash screen with "Weather Tracker" Title, followed by custom logo, Michael Herring(full name), ST10434179(student number)
 If "Get Started" button is clicked:
-  Navigate to MainScreen
+	Navigate to MainScreen
 If "Exit" button is clicked:
-Close the app
+	Close the app
 
 MainScreen:
 Initialize days as ArrayList<String>
