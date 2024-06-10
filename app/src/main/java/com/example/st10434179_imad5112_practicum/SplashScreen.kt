@@ -15,13 +15,13 @@ class SplashScreen : AppCompatActivity() {
             val getstartedButton = findViewById<Button>(R.id.btnGetStarted)
             val exitButton = findViewById<Button>(R.id.btnExit)
 
-            getstartedButton.setOnClickListener {
+            getstartedButton.setOnClickListener {       //intent to MainScreen
                 val intent = Intent(this, MainScreen::class.java)
                 startActivity(intent)
                 finish()
             }
 
-            exitButton.setOnClickListener {
+            exitButton.setOnClickListener {     //exits the app
                 finish()
             }
 

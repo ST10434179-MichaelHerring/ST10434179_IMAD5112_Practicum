@@ -22,8 +22,10 @@
             </intent-filter>
         </activity>
 
-        <!-- Add the MainScreen activity declaration here -->
         <activity android:name=".MainScreen" android:exported="true"/>
+
+        <!-- Add the DetailScreen activity declaration here -->
+        <activity android:name=".DetailScreen" android:exported="true"/>
 
     </application>
 

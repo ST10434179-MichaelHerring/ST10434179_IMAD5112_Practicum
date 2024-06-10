@@ -12,11 +12,13 @@ import androidx.appcompat.app.AppCompatActivity
 class MainScreen : AppCompatActivity() {
 
 
-   private val days = ArrayList<String>()
-   private val minTemps = ArrayList<Int>()
-   private val maxTemps = ArrayList<Int>()
-   private val allweatherConditions = ArrayList<String>()
+    //parallel arrays declaration above OnCreate to be able to use in functions
+    private val days = ArrayList<String>()
+    private val minTemps = ArrayList<Int>()
+    private val maxTemps = ArrayList<Int>()
+    private val allweatherConditions = ArrayList<String>()
 
+    //userinputted values declared above OnCreate to be able to use in functions as well
     private lateinit var edtDay: EditText
     private lateinit var edtMinTemp: EditText
     private lateinit var edtMaxTemp: EditText
@@ -28,24 +30,29 @@ class MainScreen : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.main_screen)
 
-        var edtDay = findViewById<EditText>(R.id.edtDay)
-        var edtMinTemp = findViewById<EditText>(R.id.edtMinTemp)
-        var edtMaxTemp = findViewById<EditText>(R.id.edtMaxTemp)
-        var edtWeatherConditions = findViewById<EditText>(R.id.edtWeatherConditions)
+        //initializing variables in the OnCreate
+        edtDay = findViewById(R.id.edtDay)
+        edtMinTemp = findViewById(R.id.edtMinTemp)
+        edtMaxTemp = findViewById(R.id.edtMaxTemp)
+        edtWeatherConditions = findViewById(R.id.edtWeatherConditions)
 
+        //button declarations
         val btnAdd = findViewById<Button>(R.id.btnAdd)
         val btnClear = findViewById<Button>(R.id.btnClear)
         val btnViewDetails = findViewById<Button>(R.id.btnDetails)
 
 
+        //button that clears user inputs and arrays
         btnClear.setOnClickListener {
             clear()
         }
 
+        //button that adds user inputs to arrays
         btnAdd.setOnClickListener {
             addData()
         }
 
+        //parsing values so we are able to use them on DetailScreen, this also swaps screens to DetailScreen
         btnViewDetails.setOnClickListener {
             val intent = Intent(this, DetailScreen::class.java)
             intent.putStringArrayListExtra("days", days)
@@ -58,31 +65,37 @@ class MainScreen : AppCompatActivity() {
 
     private fun addData() {
 
+        //declaring the user inputted values so we are able to input them into the arrays
         val day = edtDay.text.toString()
         val minTemp = edtMinTemp.text.toString().toIntOrNull()
         val maxTemp = edtMaxTemp.text.toString().toIntOrNull()
         val weatherConditions = edtWeatherConditions.text.toString()
 
+        //only adds values if all values are present/entered in
         if (day.isNotEmpty() && minTemp != null && maxTemp != null && weatherConditions.isNotEmpty()) {
             days.add(day)
             minTemps.add(minTemp)
             maxTemps.add(maxTemp)
             allweatherConditions.add(weatherConditions)
 
+            //clears the fields once values are added to the parallel arrays
             edtDay.text.clear()
             edtMinTemp.text.clear()
             edtMaxTemp.text.clear()
             edtWeatherConditions.text.clear()
 
+            //toast to show values have been added to arrays
             Toast.makeText(this, "User inputs added", Toast.LENGTH_SHORT).show()
         }
         else
         {
+            //toast to show values have not been added to arrays
             Toast.makeText(this, "Please enter all fields correctly", Toast.LENGTH_SHORT).show()
         }
     }
 
     private fun clear() {
+        //clears all fields and arrays
         days.clear()
         minTemps.clear()
         maxTemps.clear()
@@ -93,6 +106,7 @@ class MainScreen : AppCompatActivity() {
         edtMaxTemp.text.clear()
         edtWeatherConditions.text.clear()
 
+        //toast to confirm all user inputs were cleared
         Toast.makeText(this, "User inputs cleared", Toast.LENGTH_SHORT).show()
     }
 
