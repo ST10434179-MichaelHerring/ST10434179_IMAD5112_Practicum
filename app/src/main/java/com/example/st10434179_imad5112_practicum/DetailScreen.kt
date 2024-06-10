@@ -37,6 +37,7 @@ class DetailScreen : AppCompatActivity() {
         for (i in days.indices) {
             displayOutput.append("Day: ${days[i]}\n Min Temperature: ${minTemps[i]}\n Max Temperature: ${maxTemps[i]}\n Weather Condition: ${allWeatherConditions[i]}\n\n")
             totalTempForCalc += minTemps[i] + maxTemps[i]
+
         }
 
         //average temperature calculation
