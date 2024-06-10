@@ -117,7 +117,7 @@ class MainScreen : AppCompatActivity() {
         edtWeatherConditions.text.clear()
 
         //toast to confirm all user inputs were cleared
-        Toast.makeText(this, "User inputs cleared", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "User data cleared", Toast.LENGTH_SHORT).show()
     }
 
 }
