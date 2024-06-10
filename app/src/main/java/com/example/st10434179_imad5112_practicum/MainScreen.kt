@@ -23,6 +23,7 @@ class MainScreen : AppCompatActivity() {
     private lateinit var edtMinTemp: EditText
     private lateinit var edtMaxTemp: EditText
     private lateinit var edtWeatherConditions: EditText
+    private lateinit var txtErrorM: TextView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +36,7 @@ class MainScreen : AppCompatActivity() {
         edtMinTemp = findViewById(R.id.edtMinTemp)
         edtMaxTemp = findViewById(R.id.edtMaxTemp)
         edtWeatherConditions = findViewById(R.id.edtWeatherConditions)
+        txtErrorM = findViewById(R.id.txtErrorM)
 
         //button declarations
         val btnAdd = findViewById<Button>(R.id.btnAdd)
@@ -76,7 +78,9 @@ class MainScreen : AppCompatActivity() {
         val minTemp = edtMinTemp.text.toString().toIntOrNull()
         val maxTemp = edtMaxTemp.text.toString().toIntOrNull()
         val weatherConditions = edtWeatherConditions.text.toString()
-        var txtErrorM = findViewById<TextView>(R.id.txtErrorM)
+
+        //error message declaration
+        val txtErrorM = findViewById<TextView>(R.id.txtErrorM)
 
         //only adds values if all values are present/entered in
         if (day.isNotEmpty() && minTemp != null && maxTemp != null && weatherConditions.isNotEmpty()) {
@@ -115,6 +119,7 @@ class MainScreen : AppCompatActivity() {
         edtMinTemp.text.clear()
         edtMaxTemp.text.clear()
         edtWeatherConditions.text.clear()
+        txtErrorM.text = ""
 
         //toast to confirm all user inputs were cleared
         Toast.makeText(this, "User data cleared", Toast.LENGTH_SHORT).show()
