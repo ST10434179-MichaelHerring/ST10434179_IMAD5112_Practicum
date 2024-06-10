@@ -40,8 +40,7 @@ class DetailScreen : AppCompatActivity() {
 
         }
 
-
-
+        //calculation of average temperature (average not accurate)
         val averageTempValue = if (days.isEmpty() || days.size == 1)
             0
         else
