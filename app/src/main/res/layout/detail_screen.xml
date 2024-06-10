@@ -39,5 +39,5 @@
         android:layout_gravity="center_horizontal"
         android:backgroundTint="#000000"
         android:text="Back"
-        android:textSize="18sp" />
+        android:textSize="20sp" />
 </LinearLayout>

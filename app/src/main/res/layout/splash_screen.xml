@@ -58,12 +58,12 @@
 
     <Button
         android:id="@+id/btnGetStarted"
-        android:layout_width="209dp"
-        android:layout_height="wrap_content"
+        android:layout_width="216dp"
+        android:layout_height="57dp"
         android:layout_gravity="center_horizontal"
         android:backgroundTint="#20A5B6"
         android:text="Get Started"
-        android:textSize="20sp" />
+        android:textSize="22sp" />
 
     <Space
         android:layout_width="match_parent"
@@ -71,9 +71,10 @@
 
     <Button
         android:id="@+id/btnExit"
-        android:layout_width="wrap_content"
-        android:layout_height="39dp"
+        android:layout_width="102dp"
+        android:layout_height="41dp"
         android:layout_gravity="center_horizontal"
         android:backgroundTint="#000000"
-        android:text="Exit" />
+        android:text="Exit"
+        android:textSize="18sp" />
 </LinearLayout>
