@@ -10,12 +10,12 @@
 
     <EditText
         android:id="@+id/edtDay"
-        android:layout_width="match_parent"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        android:hint="Monday - Sunday"
+        android:inputType="text" />
 
     <Space
         android:layout_width="match_parent"
@@ -23,12 +23,12 @@
 
     <EditText
         android:id="@+id/edtMinTemp"
-        android:layout_width="match_parent"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        android:hint="Min Temperature"
+        android:inputType="text" />
 
     <Space
         android:layout_width="match_parent"
@@ -36,25 +36,25 @@
 
     <EditText
         android:id="@+id/edtMaxTemp"
-        android:layout_width="match_parent"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        android:hint="Max Temperature"
+        android:inputType="text" />
 
     <Space
         android:layout_width="match_parent"
         android:layout_height="36dp" />
 
     <EditText
-        android:id="@+id/edtWeatherCondition"
-        android:layout_width="match_parent"
+        android:id="@+id/edtWeatherConditions"
+        android:layout_width="340dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:ems="10"
-        android:inputType="text"
-        android:text="Name" />
+        android:hint="Weather Condition (Sunny, Rainy, etc.)"
+        android:inputType="text" />
 
     <Space
         android:layout_width="match_parent"
@@ -62,7 +62,7 @@
 
     <Button
         android:id="@+id/btnAdd"
-        android:layout_width="match_parent"
+        android:layout_width="241dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="Add" />
@@ -73,7 +73,7 @@
 
     <Button
         android:id="@+id/btnClear"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="Clear" />
@@ -84,7 +84,7 @@
 
     <Button
         android:id="@+id/btnDetails"
-        android:layout_width="match_parent"
+        android:layout_width="206dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:text="View Details" />
