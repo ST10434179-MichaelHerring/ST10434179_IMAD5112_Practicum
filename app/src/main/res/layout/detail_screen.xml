@@ -12,6 +12,7 @@
         android:id="@+id/txtOutput"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:text="TextView" />
 
     <Space
@@ -22,6 +23,7 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:text="TextView" />
 
     <Space
@@ -29,8 +31,9 @@
         android:layout_height="67dp" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="match_parent"
+        android:id="@+id/btnBack"
+        android:layout_width="215dp"
         android:layout_height="wrap_content"
-        android:text="Button" />
+        android:layout_gravity="center_horizontal"
+        android:text="Back" />
 </LinearLayout>
