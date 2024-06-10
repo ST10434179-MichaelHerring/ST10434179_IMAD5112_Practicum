@@ -1,5 +1,6 @@
 package com.example.st10434179_imad5112_practicum
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
@@ -11,10 +12,10 @@ import androidx.appcompat.app.AppCompatActivity
 class MainScreen : AppCompatActivity() {
 
 
-   private val day = ArrayList<String>()
-   private val minTemp = ArrayList<Int>()
-   private val maxTemp = ArrayList<Int>()
-   private val weatherConditions = ArrayList<String>()
+   private val days = ArrayList<String>()
+   private val minTemps = ArrayList<Int>()
+   private val maxTemps = ArrayList<Int>()
+   private val allweatherConditions = ArrayList<String>()
 
     private lateinit var edtDay: EditText
     private lateinit var edtMinTemp: EditText
@@ -41,7 +42,18 @@ class MainScreen : AppCompatActivity() {
             clear()
         }
 
+        btnAdd.setOnClickListener {
+            addData()
+        }
 
+        btnViewDetails.setOnClickListener {
+            val intent = Intent(this, DetailScreen::class.java)
+            intent.putStringArrayListExtra("days", days)
+            intent.putIntegerArrayListExtra("minTemps", minTemps)
+            intent.putIntegerArrayListExtra("maxTemps", maxTemps)
+            intent.putStringArrayListExtra("allweatherConditions", allweatherConditions)
+            startActivity(intent)
+        }
     }
 
     private fun addData() {
@@ -51,15 +63,30 @@ class MainScreen : AppCompatActivity() {
         val maxTemp = edtMaxTemp.text.toString().toIntOrNull()
         val weatherConditions = edtWeatherConditions.text.toString()
 
-        if (day.isNotEmpty() && minTemp != null && maxTemp != null && weatherConditions.isNotEmpty()) {)
+        if (day.isNotEmpty() && minTemp != null && maxTemp != null && weatherConditions.isNotEmpty()) {
+            days.add(day)
+            minTemps.add(minTemp)
+            maxTemps.add(maxTemp)
+            allweatherConditions.add(weatherConditions)
 
+            edtDay.text.clear()
+            edtMinTemp.text.clear()
+            edtMaxTemp.text.clear()
+            edtWeatherConditions.text.clear()
+
+            Toast.makeText(this, "User inputs added", Toast.LENGTH_SHORT).show()
+        }
+        else
+        {
+            Toast.makeText(this, "Please enter all fields correctly", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun clear() {
-        day.clear()
-        minTemp.clear()
-        maxTemp.clear()
-        weatherConditions.clear()
+        days.clear()
+        minTemps.clear()
+        maxTemps.clear()
+        allweatherConditions.clear()
 
         edtDay.text.clear()
         edtMinTemp.text.clear()
@@ -67,13 +94,6 @@ class MainScreen : AppCompatActivity() {
         edtWeatherConditions.text.clear()
 
         Toast.makeText(this, "User inputs cleared", Toast.LENGTH_SHORT).show()
-
     }
-
-
-    private fun viewDetails() {
-    }
-
-
 
 }
