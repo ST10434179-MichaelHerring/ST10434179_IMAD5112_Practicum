@@ -1,7 +1,7 @@
 Michael Herring
 ST10434179
 
-Repo link: 
+Repo link: https://github.com/ST10434179-MichaelHerring/ST10434179_IMAD5112_Practicum/tree/master
 
 This app was made to record user inputted days with the min temperature and maximum temperature of that day along with weather conditions.
 For example:
@@ -14,7 +14,7 @@ Weather Conditions: Sunny
 It records the user inputted values for each day and displays them.
 The application also displays the average temperature over all the inputted days.
 
-Pseudocode:
+Pseudocode (unfortunately formatted very strangely, attempted to fix):
 
 Splash Screen:
 Display splash screen with "Weather Tracker" Title, followed by custom logo, Michael Herring(full name), ST10434179(student number)
