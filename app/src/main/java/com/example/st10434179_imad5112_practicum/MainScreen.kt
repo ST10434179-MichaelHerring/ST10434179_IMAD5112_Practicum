@@ -18,7 +18,7 @@ class MainScreen : AppCompatActivity() {
     private val maxTemps = ArrayList<Int>()
     private val allWeatherConditions = ArrayList<String>()
 
-    //userinputted values declared above OnCreate to be able to use in functions as well
+    //user inputted values declared above OnCreate to be able to use in functions as well
     private lateinit var edtDay: EditText
     private lateinit var edtMinTemp: EditText
     private lateinit var edtMaxTemp: EditText

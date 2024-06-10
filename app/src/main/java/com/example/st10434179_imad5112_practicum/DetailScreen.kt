@@ -22,24 +22,34 @@ class DetailScreen : AppCompatActivity() {
 
         btnBack = findViewById(R.id.btnBack)
 
+        //Retrieving data from previous activity (MainScreen) to be able to use in this activity
         val days = intent.getStringArrayListExtra("days") ?: arrayListOf()
         val minTemps = intent.getIntegerArrayListExtra("minTemps") ?: arrayListOf()
         val maxTemps = intent.getIntegerArrayListExtra("maxTemps") ?: arrayListOf()
         val allWeatherConditions = intent.getStringArrayListExtra("allWeatherConditions") ?: arrayListOf()
 
+        //using stringbuilder to easily manipulate the output
         val displayOutput = StringBuilder()
+        //only use is for calculating the average temperature
         var totalTempForCalc = 0
 
+        //for each loop looping for as many entries there are in the array of days, and adding each array entry into the displayOutput string
         for (i in days.indices) {
             displayOutput.append("Day: ${days[i]}\n Min Temperature: ${minTemps[i]}\n Max Temperature: ${maxTemps[i]}\n Weather Condition: ${allWeatherConditions[i]}\n\n")
             totalTempForCalc += minTemps[i] + maxTemps[i]
         }
 
+        //average temperature calculation
         val averageTempValue = totalTempForCalc / days.size
 
+        //output of the string we just built (results)
         txtOutput.text = displayOutput.toString()
+
+        //output of average temperature
         averageTemp.text = "Average Temperature: $averageTempValue degrees"
 
+
+        //button to go back to MainScreen
         btnBack.setOnClickListener {
             finish()
         }

@@ -12,10 +12,10 @@ class SplashScreen : AppCompatActivity() {
             enableEdgeToEdge()
             setContentView(R.layout.splash_screen)
 
-            val getstartedButton = findViewById<Button>(R.id.btnGetStarted)
+            val getStartedButton = findViewById<Button>(R.id.btnGetStarted)
             val exitButton = findViewById<Button>(R.id.btnExit)
 
-            getstartedButton.setOnClickListener {       //intent to MainScreen
+            getStartedButton.setOnClickListener {       //intent to MainScreen
                 val intent = Intent(this, MainScreen::class.java)
                 startActivity(intent)
                 finish()
