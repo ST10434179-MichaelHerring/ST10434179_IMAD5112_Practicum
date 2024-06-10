@@ -114,14 +114,15 @@ Screen welcoming the user, with a friendly logo.
 
 Main Screen
 Screen where the user will be inputting their data. Temperature fields only allow integers, no strings are able to be entered.
-![Main_Screen](https://github.com/ST10434179-MichaelHerring/ST10434179_IMAD5112_Practicum/assets/164514448/092d7ad4-040a-4cee-9bd7-0e5730f1b4c4)
+![Main_Screen](https://github.com/ST10434179-MichaelHerring/ST10434179_IMAD5112_Practicum/assets/164514448/c2c4e9d3-0176-4aa7-96cc-19f18816ff07)
+
 
 Main Screen with Temperature error(if user tries to enter a minimum value that is higher than the maximum value), trying to screenshot toasts are extremely challenging
 ![Main_Screen_withTempError](https://github.com/ST10434179-MichaelHerring/ST10434179_IMAD5112_Practicum/assets/164514448/bbcccc25-623f-4b56-b2bb-a5e78805728c)
 
 Details Screen
 Displays all user inputted data. If either no days or 1 day is entered, the average temperature will not be calculated and displayed.
-![Details_Screen](https://github.com/ST10434179-MichaelHerring/ST10434179_IMAD5112_Practicum/assets/164514448/8820618c-e244-4938-917b-dae754c01b86)
+![Details_Screen](https://github.com/ST10434179-MichaelHerring/ST10434179_IMAD5112_Practicum/assets/164514448/40b950ce-13e4-416f-b6c9-e587de4c0c51)
 
 
 
