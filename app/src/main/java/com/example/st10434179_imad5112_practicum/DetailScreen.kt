@@ -35,13 +35,17 @@ class DetailScreen : AppCompatActivity() {
 
         //for each loop looping for as many entries there are in the array of days, and adding each array entry into the displayOutput string
         for (i in days.indices) {
-            displayOutput.append("Day: ${days[i]}\n Min Temperature: ${minTemps[i]}\n Max Temperature: ${maxTemps[i]}\n Weather Condition: ${allWeatherConditions[i]}\n\n")
+            displayOutput.append("Day: ${days[i]}\n Min Temperature: ${minTemps[i]} degrees \n Max Temperature: ${maxTemps[i]} degrees \n Weather Condition: ${allWeatherConditions[i]}\n\n")
             totalTempForCalc += minTemps[i] + maxTemps[i]
 
         }
 
-        //average temperature calculation
-        val averageTempValue = totalTempForCalc / days.size
+
+
+        val averageTempValue = if (days.isEmpty() || days.size == 1)
+            0
+        else
+            totalTempForCalc / days.size
 
         //output of the string we just built (results)
         txtOutput.text = displayOutput.toString()
